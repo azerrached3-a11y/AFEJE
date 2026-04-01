@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -89,12 +92,14 @@ export default function Home() {
       {/* Pillars preview */}
       <section className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <FadeIn>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-4 sm:mb-6 text-center">
             Trois choses qu&apos;on te <span className="text-[#00FFFF]">donne</span>
           </h2>
           <p className="text-white/40 text-sm sm:text-base text-center max-w-xl mx-auto mb-12 sm:mb-16">
             Pas de théorie creuse. Des outils concrets pour construire ta vie.
           </p>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
@@ -146,6 +151,7 @@ export default function Home() {
 
       {/* Mot du fondateur */}
       <section className="border-t border-white/5 bg-white/[0.02]">
+        <FadeIn>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="flex items-center gap-3 mb-8">
             <Logo size={28} interactive />
@@ -178,10 +184,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </FadeIn>
       </section>
 
       {/* Who is it for — narrative, not a checklist */}
       <section className="border-t border-white/5">
+        <FadeIn>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-8">
             Tu te reconnais <span className="text-[#00FFFF]">là-dedans ?</span>
@@ -211,6 +219,7 @@ export default function Home() {
             <span>→</span>
           </Link>
         </div>
+        </FadeIn>
       </section>
 
       {/* Final CTA — warm, simple */}
@@ -218,6 +227,7 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-[#00FFFF]/[0.03] blur-3xl" />
         </div>
+        <FadeIn>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-6">
             On ne va pas te promettre que ce sera facile.
@@ -234,6 +244,7 @@ export default function Home() {
             Je tente l&apos;aventure →
           </Link>
         </div>
+        </FadeIn>
       </section>
     </div>
   );

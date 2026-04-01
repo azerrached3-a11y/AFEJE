@@ -1,10 +1,89 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Contact — AFEJE",
   description: "Contactez l'AFEJE — Association Française d'Encadrement des Jeunes Entrepreneurs. Questions, partenariats, presse.",
 };
+
+function SocialIcon({ platform }: { platform: string }) {
+  const size = 22;
+  switch (platform) {
+    case "instagram":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <circle cx="12" cy="12" r="5" />
+          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    case "tiktok":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.19 8.19 0 0 0 4.76 1.52V6.81a4.84 4.84 0 0 1-1-.12z" />
+        </svg>
+      );
+    case "linkedin":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      );
+    case "x":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      );
+    case "youtube":
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+const socials = [
+  {
+    name: "Instagram",
+    platform: "instagram",
+    handle: "@afeje.fr",
+    href: "#",
+    color: "hover:text-pink-400 hover:border-pink-400/30",
+  },
+  {
+    name: "TikTok",
+    platform: "tiktok",
+    handle: "@afeje.fr",
+    href: "#",
+    color: "hover:text-white hover:border-white/30",
+  },
+  {
+    name: "LinkedIn",
+    platform: "linkedin",
+    handle: "AFEJE",
+    href: "#",
+    color: "hover:text-blue-400 hover:border-blue-400/30",
+  },
+  {
+    name: "X (Twitter)",
+    platform: "x",
+    handle: "@afeje_fr",
+    href: "#",
+    color: "hover:text-white hover:border-white/30",
+  },
+  {
+    name: "YouTube",
+    platform: "youtube",
+    handle: "AFEJE",
+    href: "#",
+    color: "hover:text-red-400 hover:border-red-400/30",
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -16,63 +95,94 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6 sm:mb-8">
-            PARLONS
+            RESTONS
             <br />
-            <span className="text-[#00FFFF]">ENSEMBLE.</span>
+            <span className="text-[#00FFFF]">CONNECTÉS.</span>
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
-          <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed mb-3">
-            Une question ? Une idée de partenariat ? Ou juste envie d&apos;en
-            savoir plus avant de candidater ? Écris-nous, on répond vite.
-          </p>
-          <p className="text-white/30 text-sm">
-            On répond généralement sous 48h. Partenariats et presse bienvenus.
+          <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed">
+            Un DM, un email, un commentaire — peu importe le canal.
+            On est là, on répond, et on est toujours contents d&apos;échanger.
           </p>
         </div>
       </section>
 
-      {/* Contact Info */}
+      {/* Social Media Links */}
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-black tracking-tight mb-3">
+            Retrouve-nous <span className="text-[#00FFFF]">partout</span>
+          </h2>
+          <p className="text-white/40 text-sm mb-10 sm:mb-12">
+            Suis l&apos;aventure AFEJE au quotidien. Coulisses, témoignages, contenus.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {socials.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center gap-4 border border-white/10 p-5 sm:p-6 transition-all duration-300 card-hover ${social.color}`}
+              >
+                <div className="w-12 h-12 border border-white/15 flex items-center justify-center shrink-0 group-hover:border-current transition-colors duration-300 text-white/50 group-hover:text-current">
+                  <SocialIcon platform={social.platform} />
+                </div>
+                <div>
+                  <p className="font-bold text-sm sm:text-base text-white/80 group-hover:text-current transition-colors">
+                    {social.name}
+                  </p>
+                  <p className="text-xs text-white/30 mt-0.5 group-hover:text-white/50 transition-colors">
+                    {social.handle}
+                  </p>
+                </div>
+                <span className="ml-auto text-white/10 group-hover:text-current group-hover:translate-x-1 transition-all duration-300 text-lg">
+                  →
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Direct contact + Legal side by side */}
+      <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
-            {/* Main contact */}
-            <div className="space-y-10">
+            {/* Direct contact */}
+            <div className="space-y-8">
               <div>
-                <h2 className="text-sm font-bold tracking-widest uppercase text-[#00FFFF]/70 mb-4">
-                  Président
+                <h2 className="text-xl sm:text-2xl font-black tracking-tight mb-6">
+                  Écrire <span className="text-[#00FFFF]">directement</span>
                 </h2>
-                <p className="text-2xl font-bold">Rached Azer</p>
-                <p className="text-white/40 text-sm mt-1">
-                  Fondateur de l&apos;AFEJE — c&apos;est lui qui lit tes messages.
+                <p className="text-white/50 text-sm leading-relaxed mb-6">
+                  Question, partenariat, presse, ou juste un mot sympa —
+                  c&apos;est Rached qui lit et qui répond. Sous 48h max.
                 </p>
               </div>
 
-              <div>
-                <h2 className="text-sm font-bold tracking-widest uppercase text-[#00FFFF]/70 mb-4">
-                  Email
-                </h2>
+              <div className="border border-white/10 p-5 sm:p-6 card-hover">
+                <div className="flex items-center gap-4 mb-4">
+                  <Logo size={36} interactive />
+                  <div>
+                    <p className="font-bold text-white/90">Rached Azer</p>
+                    <p className="text-xs text-white/30">Fondateur & Président</p>
+                  </div>
+                </div>
                 <a
                   href="mailto:rached.azer@azzcolabs.business"
-                  className="text-lg sm:text-xl text-white hover:text-[#00FFFF] transition-colors break-all"
+                  className="text-[#00FFFF] hover:text-white transition-colors text-sm sm:text-base break-all"
                 >
                   rached.azer@azzcolabs.business
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="mailto:rached.azer@azzcolabs.business?subject=Contact AFEJE"
-                  className="px-6 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 text-center btn-primary"
-                >
-                  Envoyer un email →
-                </a>
-                <Link
-                  href="/rejoindre"
-                  className="px-6 py-4 border border-white/20 text-white/60 font-medium text-sm tracking-widest uppercase hover:border-[#00FFFF]/50 hover:text-[#00FFFF] transition-all duration-300 text-center"
-                >
-                  Candidater
-                </Link>
-              </div>
+              <a
+                href="mailto:rached.azer@azzcolabs.business?subject=Contact AFEJE"
+                className="inline-block px-6 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
+              >
+                Envoyer un email →
+              </a>
             </div>
 
             {/* Legal */}
@@ -82,51 +192,23 @@ export default function ContactPage() {
                   Informations légales
                 </h2>
 
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Dénomination
-                  </p>
-                  <p className="text-white/80">
-                    Association Française d&apos;Encadrement des Jeunes Entrepreneurs
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Sigle
-                  </p>
-                  <p className="text-white/80">AFEJE</p>
-                </div>
-
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Numéro d&apos;association
-                  </p>
-                  <p className="text-white/80 font-mono">W923012377</p>
-                </div>
-
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Préfecture
-                  </p>
-                  <p className="text-white/80">Hauts-de-Seine</p>
-                </div>
-
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Statut juridique
-                  </p>
-                  <p className="text-white/80">Association loi 1901</p>
-                </div>
-
-                <div>
-                  <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
-                    Écosystème
-                  </p>
-                  <p className="text-white/80">
-                    AZZ&CO LABS SAS &middot; OpenCloud Tech
-                  </p>
-                </div>
+                {[
+                  { label: "Dénomination", value: "Association Française d'Encadrement des Jeunes Entrepreneurs" },
+                  { label: "Sigle", value: "AFEJE" },
+                  { label: "N° association", value: "W923012377", mono: true },
+                  { label: "Préfecture", value: "Hauts-de-Seine" },
+                  { label: "Statut", value: "Association loi 1901" },
+                  { label: "Écosystème", value: "AZZ&CO LABS SAS · OpenCloud Tech" },
+                ].map((item) => (
+                  <div key={item.label}>
+                    <p className="text-xs text-white/30 tracking-wider uppercase mb-1">
+                      {item.label}
+                    </p>
+                    <p className={`text-white/80 ${item.mono ? "font-mono" : ""}`}>
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
