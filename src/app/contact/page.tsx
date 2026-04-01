@@ -123,6 +123,7 @@ export default function ContactPage() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${social.name} — ${social.handle}`}
                 className={`group flex items-center gap-4 border border-white/10 p-5 sm:p-6 transition-all duration-300 card-hover ${social.color}`}
               >
                 <div className="w-12 h-12 border border-white/15 flex items-center justify-center shrink-0 group-hover:border-current transition-colors duration-300 text-white/50 group-hover:text-current">
