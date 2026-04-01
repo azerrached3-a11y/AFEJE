@@ -94,4 +94,20 @@
   <circle cx="104" cy="216" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
   <circle cx="152" cy="152" r="16" fill="#00FFFF" opacity="0.1"/>
   <circle cx="152" cy="152" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+
+  <!-- Circular text ring -->
+  <!-- Subtle ring -->
+  <circle cx="400" cy="400" r="360" stroke="#00FFFF" stroke-width="1" opacity="0.1"/>
+
+  <!-- Full name arc: 7 o'clock (210°) clockwise to 4 o'clock (120°) ≈ 270° sweep -->
+  <path id="nameArc" d="M 87.18 580 A 360 360 0 1 1 580 87.18" fill="none" stroke="none"/>
+  <text fill="white" opacity="0.5" font-size="38" font-weight="600" letter-spacing="12" font-family="system-ui, -apple-system, sans-serif">
+    <textPath href="#nameArc" startOffset="3%">ASSOCIATION FRANÇAISE D'ENCADREMENT DES JEUNES ENTREPRENEURS</textPath>
+  </text>
+
+  <!-- Sigle arc: 5 o'clock (150°) clockwise to 7 o'clock (210°) ≈ 60° sweep -->
+  <path id="sigleArc" d="M 711.77 580 A 360 360 0 0 1 87.18 580" fill="none" stroke="none"/>
+  <text fill="#00FFFF" opacity="0.7" font-size="58" font-weight="800" letter-spacing="28" font-family="system-ui, -apple-system, sans-serif">
+    <textPath href="#sigleArc" startOffset="22%">AFEJE</textPath>
+  </text>
 </svg>

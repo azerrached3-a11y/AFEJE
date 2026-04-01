@@ -100,6 +100,40 @@ export default function Logo({
             <circle cx={cx} cy={cy} r="2.5" fill="#00FFFF" opacity="0.7" className="logo-tip" style={{ animationDelay: `${0.1 * i}s` }} />
           </g>
         ))}
+
+        {/* Circular text ring */}
+        {size >= 60 && (
+          <g>
+            {/* Full name arc: 7 o'clock (210°) → 4 o'clock (120°) clockwise = sweeping ~270° */}
+            <path
+              id={`${uid}-nameArc`}
+              d="M 17.16 150 A 95 95 0 1 1 147.5 17.78"
+              fill="none"
+              stroke="none"
+            />
+            <text fill="white" opacity="0.5" fontSize="11.5" fontWeight="600" letterSpacing="3" fontFamily="var(--font-geist-sans), system-ui, sans-serif">
+              <textPath href={`#${uid}-nameArc`} startOffset="4%">
+                ASSOCIATION FRANÇAISE D&apos;ENCADREMENT DES JEUNES ENTREPRENEURS
+              </textPath>
+            </text>
+
+            {/* Sigle arc: 5 o'clock (150°) → 7 o'clock (210°) clockwise = sweeping ~60° */}
+            <path
+              id={`${uid}-sigleArc`}
+              d="M 182 150 A 95 95 0 0 1 17.16 150"
+              fill="none"
+              stroke="none"
+            />
+            <text fill="#00FFFF" opacity="0.7" fontSize="16" fontWeight="800" letterSpacing="8" fontFamily="var(--font-geist-sans), system-ui, sans-serif">
+              <textPath href={`#${uid}-sigleArc`} startOffset="24%">
+                AFEJE
+              </textPath>
+            </text>
+
+            {/* Subtle ring behind text */}
+            <circle cx="100" cy="100" r="95" stroke="#00FFFF" strokeWidth="0.3" opacity="0.1" />
+          </g>
+        )}
       </svg>
     </div>
   );
