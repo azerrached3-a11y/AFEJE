@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Le Code — AFEJE",
-  description: "Le Code de la Fraternité : manifeste, principes et serment de l'AFEJE.",
+  description: "Le Code : manifeste, principes et serment de la communauté AFEJE.",
 };
 
 export default function CodePage() {
@@ -24,11 +24,9 @@ export default function CodePage() {
             <span className="text-[#00FFFF]">CODE.</span>
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mx-auto mb-6 sm:mb-8" />
-          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto px-2 mb-3">
-            Ce qui nous lie. Ce qui nous définit. Ce qui nous sépare du reste.
-          </p>
-          <p className="text-white/30 text-xs">
-            Le Code est l&apos;ADN de chaque frère AFEJE — il se lit, se vit et se transmet.
+          <p className="text-base sm:text-lg text-white/50 max-w-xl mx-auto px-2">
+            Le Code, c&apos;est pas un document. C&apos;est ce qu&apos;on est.
+            Chaque membre le porte en soi.
           </p>
         </div>
       </section>
@@ -36,31 +34,28 @@ export default function CodePage() {
       {/* Manifeste */}
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12 text-center">
-            LE <span className="text-[#00FFFF]">MANIFESTE</span>
-          </h2>
           <div className="space-y-6 sm:space-y-8 text-white/70 text-base sm:text-lg leading-relaxed">
             <p>
-              Nous sommes ceux qui viennent d&apos;en bas. Pas par choix. Par circonstance.
-              Mais ce qui nous définit, ce n&apos;est pas d&apos;où on vient — c&apos;est où on va.
+              On vient d&apos;en bas. Pas par choix. Par circonstance.
             </p>
             <p>
-              Nous croyons que l&apos;entrepreneuriat est la voie royale vers la dignité
-              économique. Que le savoir se transmet entre frères. Que le réseau se
-              construit dans la loyauté. Que l&apos;infrastructure se bâtit dans la durée.
+              Personne ne nous attendait. Personne ne nous a fait de place.
+              Alors on s&apos;est dit : on va la construire nous-mêmes, cette place.
+              Et on va la construire ensemble.
             </p>
             <p>
-              Nous croyons en la puissance des neurosciences pour reprogrammer les
-              schémas de pensée. En la discipline comme moteur de transformation.
-              En la fraternité comme socle de tout ce qu&apos;on construit.
+              On croit que le vrai problème, c&apos;est pas le talent — c&apos;est l&apos;accès.
+              L&apos;accès au savoir, aux bonnes personnes, aux outils qui permettent
+              de transformer une idée en quelque chose de concret.
             </p>
             <p>
-              Nous refusons l&apos;assistanat. Nous refusons les excuses. Nous refusons
-              d&apos;attendre qu&apos;on nous donne ce qu&apos;on peut construire nous-mêmes.
+              On croit que quand tu changes ta façon de penser, tu changes ta vie.
+              Que quand tu t&apos;entoures des bonnes personnes, tout devient possible.
+              Que quand tu t&apos;engages vraiment, personne ne peut t&apos;arrêter.
             </p>
             <p>
-              Chaque membre de cette fraternité est un bâtisseur. Chaque engagement est
-              sacré. Chaque réussite individuelle élève le collectif.
+              On refuse d&apos;attendre. On refuse les excuses. On refuse
+              qu&apos;on nous donne ce qu&apos;on peut construire nous-mêmes.
             </p>
             <p className="text-[#00FFFF] font-bold text-lg sm:text-xl">
               On ne demande pas la permission. On construit.
@@ -73,23 +68,23 @@ export default function CodePage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4 sm:mb-6 text-center">
-            LES 10 <span className="text-[#00FFFF]">PRINCIPES</span>
+            Les 10 <span className="text-[#00FFFF]">principes</span>
           </h2>
           <p className="text-white/40 text-sm text-center max-w-md mx-auto mb-10 sm:mb-12">
-            Ces principes ne sont pas des suggestions. Ce sont les règles du jeu. Si tu les acceptes, tu es des nôtres.
+            C&apos;est pas des suggestions. C&apos;est les règles du jeu. Si tu les acceptes, tu es des nôtres.
           </p>
           <div className="space-y-4 sm:space-y-6">
             {[
-              { num: "I", text: "La loyauté envers la fraternité est absolue." },
+              { num: "I", text: "La loyauté envers la communauté est absolue." },
               { num: "II", text: "Le savoir acquis se transmet. Toujours." },
               { num: "III", text: "L'excellence n'est pas une option — c'est le standard." },
               { num: "IV", text: "On protège les nôtres. On élève les nôtres." },
               { num: "V", text: "L'argent est un outil, jamais une fin." },
-              { num: "VI", text: "Chaque frère est responsable de sa parole et de ses actes." },
+              { num: "VI", text: "Chaque membre est responsable de sa parole et de ses actes." },
               { num: "VII", text: "On ne mendie pas les opportunités. On les crée." },
               { num: "VIII", text: "Le respect se gagne par les résultats, pas par les mots." },
               { num: "IX", text: "L'échec est un enseignement. La lâcheté est inacceptable." },
-              { num: "X", text: "Un frère qui réussit seul a échoué." },
+              { num: "X", text: "Celui ou celle qui réussit seul·e a échoué." },
             ].map((rule) => (
               <div
                 key={rule.num}
@@ -114,16 +109,19 @@ export default function CodePage() {
         </div>
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            LE <span className="text-[#00FFFF]">SERMENT</span>
+            Le <span className="text-[#00FFFF]">serment</span>
           </h2>
+          <p className="text-white/40 text-sm text-center max-w-md mx-auto mb-8">
+            Ce que chaque membre dit le jour où il ou elle rejoint l&apos;AFEJE.
+          </p>
           <div className="border border-[#00FFFF]/20 p-6 sm:p-8 md:p-12">
             <p className="text-white/80 text-base sm:text-lg md:text-xl leading-relaxed italic">
-              &ldquo;Je m&apos;engage devant mes frères à honorer le Code. À transmettre ce
-              que j&apos;apprends. À construire ce qui dure. À ne jamais oublier d&apos;où je
-              viens, et à toujours viser plus haut que ce qu&apos;on attend de moi.
+              &ldquo;Je m&apos;engage devant les miens. Je transmettrai ce que j&apos;apprends.
+              Je construirai ce qui dure. Je n&apos;oublierai jamais d&apos;où je viens.
+              Et je viserai toujours plus haut que ce qu&apos;on attend de moi.
             </p>
             <p className="text-white/80 text-base sm:text-lg md:text-xl leading-relaxed italic mt-4 sm:mt-6">
-              Je suis un bâtisseur. Je suis un frère. Je suis AFEJE.&rdquo;
+              Je fais partie de l&apos;AFEJE. Et ça veut dire quelque chose.&rdquo;
             </p>
             <div className="w-12 h-px bg-[#00FFFF]/40 mx-auto mt-6 sm:mt-8" />
           </div>
@@ -134,21 +132,18 @@ export default function CodePage() {
       <section className="border-t border-white/5 bg-[#00FFFF]/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4">
-            CE CODE TE <span className="text-[#00FFFF]">PARLE</span> ?
+            Ça te <span className="text-[#00FFFF]">parle</span> ?
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            Si ces mots résonnent en toi, c&apos;est que tu es peut-être déjà un frère.
-            Il ne reste qu&apos;à officialiser.
-          </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Candidature en 2 minutes · Places limitées · 100% gratuit
+          <p className="text-white/50 mb-8 sm:mb-10 max-w-lg mx-auto text-sm sm:text-base">
+            Si t&apos;as lu jusqu&apos;ici et que ça résonne, c&apos;est que t&apos;es peut-être
+            déjà des nôtres. Viens, on t&apos;attend.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/rejoindre"
               className="w-full sm:w-auto px-8 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
             >
-              Rejoindre la fraternité →
+              Nous rejoindre →
             </Link>
             <Link
               href="/mission"

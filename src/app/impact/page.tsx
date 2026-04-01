@@ -23,11 +23,11 @@ export default function ImpactPage() {
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed mb-4">
-            Des cerveaux reprogrammés. Des entreprises lancées. De l&apos;autonomie
-            économique conquise. Pas des statistiques — des vies transformées.
+            Des personnes transformées. Des entreprises lancées. De l&apos;autonomie
+            économique conquise. Pas des statistiques — des vies qui changent.
           </p>
           <p className="text-white/30 text-sm">
-            Impact mesurable · Transformation réelle · Résultats concrets
+            On ne parle pas d&apos;impact en chiffres. On parle de vies qui changent.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function ImpactPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            CE QUE NOUS <span className="text-[#00FFFF]">BÂTISSONS</span>
+            Ce qu&apos;on <span className="text-[#00FFFF]">construit</span> vraiment
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -83,32 +83,28 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* Transformation */}
+      {/* Ce que ça change concrètement */}
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            LA <span className="text-[#00FFFF]">TRANSFORMATION</span>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-10">
+            Ce que ça <span className="text-[#00FFFF]">change</span> concrètement
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {[
-              { avant: "Croyances limitantes", après: "Circuits neuronaux de performance" },
-              { avant: "Isolement", après: "Fraternité et réseau structuré" },
-              { avant: "Réaction émotionnelle", après: "Décision stratégique sous pression" },
-              { avant: "Idée vague", après: "Entreprise viable avec clients" },
-            ].map((item) => (
-              <div
-                key={item.avant}
-                className="flex items-center gap-3 sm:gap-4 border border-white/10 p-4 sm:p-6 hover:border-[#00FFFF]/15 transition-colors card-hover"
-              >
-                <div className="flex-1">
-                  <p className="text-white/30 text-xs sm:text-sm line-through">{item.avant}</p>
-                </div>
-                <span className="text-[#00FFFF] text-lg shrink-0">&rarr;</span>
-                <div className="flex-1">
-                  <p className="text-white/80 text-xs sm:text-sm font-medium">{item.après}</p>
-                </div>
-              </div>
-            ))}
+          <div className="space-y-6 text-white/60 text-sm sm:text-base leading-relaxed">
+            <p>
+              Avant l&apos;AFEJE, tu doutais de toi à chaque décision. Tu te disais
+              &ldquo;c&apos;est pas pour moi&rdquo; ou &ldquo;je suis pas assez prêt·e.&rdquo;
+              Tu avais l&apos;idée, mais elle restait dans ta tête.
+            </p>
+            <p>
+              Après, tu prends des décisions différemment. Tu gères la pression.
+              Tu sais à qui parler et comment avancer. Tu as lancé quelque chose
+              — ou tu es en train de le faire, avec des gens qui croient en toi.
+            </p>
+            <p className="text-white/80">
+              C&apos;est pas de la magie. C&apos;est 12 mois de travail, de remise en
+              question, et de soutien collectif. Et à la fin, tu ne penses plus
+              pareil.
+            </p>
           </div>
         </div>
       </section>
@@ -117,7 +113,7 @@ export default function ImpactPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            POUR <span className="text-[#00FFFF]">QUI</span>
+            C&apos;est pour <span className="text-[#00FFFF]">qui</span> ?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             <div>
@@ -128,8 +124,8 @@ export default function ImpactPage() {
                 milieux défavorisés en France.
               </p>
               <p className="text-white/60 leading-relaxed mb-6 text-sm sm:text-base">
-                Ceux qui ont le feu mais pas le cadre. L&apos;ambition mais pas le
-                réseau. L&apos;énergie mais pas les outils.
+                Celles et ceux qui ont le feu mais pas le cadre. L&apos;ambition mais
+                pas le réseau. L&apos;énergie mais pas les outils.
               </p>
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                 On ne cherche pas des profils parfaits. On cherche des bâtisseurs
@@ -142,7 +138,7 @@ export default function ImpactPage() {
                 "Porteurs de projets sans réseau ni structure",
                 "Talents issus de quartiers prioritaires",
                 "Profils atypiques avec une vraie ambition",
-                "Ceux qui veulent reprogrammer leur façon de penser",
+                "Celles et ceux qui veulent changer leur façon de penser",
               ].map((item) => (
                 <div
                   key={item}
@@ -161,7 +157,7 @@ export default function ImpactPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            L&apos;ÉCOSYSTÈME <span className="text-[#00FFFF]">PARTENAIRE</span>
+            On n&apos;est pas <span className="text-[#00FFFF]">seuls</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="border border-white/10 p-6 sm:p-8 hover:border-[#00FFFF]/20 transition-all duration-500 card-hover">
@@ -201,27 +197,24 @@ export default function ImpactPage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4">
-            FAIS PARTIE DE <span className="text-[#00FFFF]">L&apos;IMPACT</span>
+            Tu veux faire partie de <span className="text-[#00FFFF]">cette histoire</span> ?
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            Rejoins la fraternité. Reprogramme ton cerveau. Construis ton avenir.
-            Élève ta communauté.
-          </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Places limitées · Candidature en 2 minutes · 100% gratuit
+          <p className="text-white/50 mb-8 sm:mb-10 max-w-lg mx-auto text-sm sm:text-base">
+            2 minutes pour candidater. Gratuit. Ouvert à toutes et tous.
+            On attend juste ta motivation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/rejoindre"
               className="w-full sm:w-auto px-8 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
             >
-              Candidater maintenant →
+              Faire partie de l&apos;aventure →
             </Link>
             <Link
               href="/programme"
               className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white/60 font-medium text-sm tracking-widest uppercase hover:border-[#00FFFF]/50 hover:text-[#00FFFF] transition-all duration-300 text-center"
             >
-              Voir le programme
+              Découvrir le programme
             </Link>
           </div>
         </div>

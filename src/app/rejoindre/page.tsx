@@ -46,14 +46,14 @@ export default function RejoindrePage() {
             <div className="w-6 h-6 bg-[#00FFFF] rotate-45" />
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-4">
-            CANDIDATURE <span className="text-[#00FFFF]">REÇUE.</span>
+            C&apos;est <span className="text-[#00FFFF]">envoyé.</span>
           </h1>
           <p className="text-white/60 leading-relaxed mb-4">
-            Ta candidature a été envoyée avec succès. Si ton profil correspond
-            à l&apos;esprit de la fraternité, on te recontactera rapidement.
+            On a bien reçu ta candidature. On la lit, on en discute,
+            et on te recontacte rapidement si ça matche.
           </p>
           <p className="text-[#00FFFF]/60 text-sm mb-8">
-            Reste prêt. Reste focus. La fraternité t&apos;attend.
+            En attendant, hésite pas à lire le Code ou découvrir le programme.
           </p>
           <Link
             href="/"
@@ -75,17 +75,17 @@ export default function RejoindrePage() {
             Candidature
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-none mb-6 sm:mb-8">
-            REJOINDRE LA
+            NOUS
             <br />
-            <span className="text-[#00FFFF]">FRATERNITÉ.</span>
+            <span className="text-[#00FFFF]">REJOINDRE.</span>
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg text-white/60 max-w-xl leading-relaxed mb-3">
-            Remplis ce formulaire en 2 minutes. Sois honnête. On ne cherche pas
-            des CV parfaits — on cherche des bâtisseurs prêts à s&apos;engager.
+            2 minutes, c&apos;est tout ce qu&apos;il faut. Sois honnête dans tes réponses —
+            on ne cherche pas des profils parfaits, on cherche des gens motivé·es.
           </p>
           <p className="text-white/30 text-sm">
-            100% gratuit · Dès 15 ans · Réponse rapide
+            C&apos;est gratuit, ouvert dès 15 ans, et on répond vite.
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function RejoindrePage() {
                 htmlFor="name"
                 className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
               >
-                Nom complet
+                Comment tu t&apos;appelles ?
               </label>
               <input
                 type="text"
@@ -135,7 +135,7 @@ export default function RejoindrePage() {
                   htmlFor="age"
                   className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
                 >
-                  Âge
+                  Tu as quel âge ?
                 </label>
                 <input
                   type="number"
@@ -156,7 +156,7 @@ export default function RejoindrePage() {
                   htmlFor="city"
                   className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
                 >
-                  Ville
+                  Tu vis où ?
                 </label>
                 <input
                   type="text"
@@ -174,7 +174,7 @@ export default function RejoindrePage() {
                 htmlFor="situation"
                 className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
               >
-                Situation actuelle
+                Tu fais quoi en ce moment ?
               </label>
               <input
                 type="text"
@@ -191,7 +191,7 @@ export default function RejoindrePage() {
                 htmlFor="motivation"
                 className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
               >
-                Pourquoi tu veux rejoindre l&apos;AFEJE ?
+                Pourquoi tu veux nous rejoindre ?
               </label>
               <textarea
                 id="motivation"
@@ -212,7 +212,7 @@ export default function RejoindrePage() {
             </button>
 
             <p className="text-center text-white/20 text-xs">
-              En candidatant, tu acceptes de t&apos;engager dans un parcours exigeant de 12 mois.
+              C&apos;est un engagement de 12 mois. On ne te demande rien d&apos;autre que ta motivation.
             </p>
           </form>
         </div>
@@ -227,8 +227,8 @@ export default function RejoindrePage() {
               Tu as moins de 15 ans ?
             </h3>
             <p className="text-white/50 text-sm leading-relaxed">
-              Tu peux rejoindre la fraternité et participer aux formations, au mentorat
-              et au réseau. Toutefois, tu ne seras pas intégré aux activités impliquant
+              Tu peux nous rejoindre et participer aux formations, au mentorat
+              et au réseau. Toutefois, tu ne seras pas intégré·e aux activités impliquant
               des transactions financières réelles avant tes 15 ans.
               Candidate quand même — on veut te connaître.
             </p>

@@ -27,7 +27,7 @@ export default function MissionPage() {
             quartiers prioritaires partout en France.
           </p>
           <p className="text-white/30 text-sm">
-            Gratuit · Sans condition de diplôme · Ouvert dès 15 ans
+            On ne demande aucun diplôme. C&apos;est gratuit et ouvert dès 15 ans.
           </p>
         </div>
       </section>
@@ -36,15 +36,15 @@ export default function MissionPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-10">
-            QU&apos;EST-CE QUE <span className="text-[#00FFFF]">L&apos;AFEJE</span> ?
+            Concrètement, c&apos;est <span className="text-[#00FFFF]">quoi</span> ?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             <div>
               <p className="text-white/60 leading-relaxed mb-6 text-sm sm:text-base">
                 Une association loi 1901 (n° W923012377, Préfecture des Hauts-de-Seine).
                 Pas une ONG classique. Pas un incubateur de plus.
-                Un cadre fraternel et exigeant pour ceux qui veulent entreprendre sérieusement
-                — qu&apos;ils aient 15 ou 45 ans.
+                Un cadre collectif et exigeant pour celles et ceux qui veulent entreprendre
+                sérieusement — qu&apos;on ait 15 ou 45 ans.
               </p>
               <p className="text-white/60 leading-relaxed mb-6 text-sm sm:text-base">
                 Le talent est partout, les opportunités non. L&apos;AFEJE crée le pont
@@ -81,7 +81,7 @@ export default function MissionPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#00FFFF] mt-0.5">—</span>
-                  <span>Méthode : le Code de la Fraternité</span>
+                  <span>Méthode : le Code du collectif</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#00FFFF] mt-0.5">—</span>
@@ -102,10 +102,10 @@ export default function MissionPage() {
               Membres de moins de 15 ans
             </h3>
             <p className="text-white/50 text-sm leading-relaxed max-w-2xl">
-              Les jeunes de moins de 15 ans peuvent rejoindre la fraternité et participer aux
-              formations, au mentorat et au réseau. Toutefois, ils ne sont pas intégrés aux
-              activités impliquant des transactions financières réelles jusqu&apos;à leurs 15 ans.
-              La formation reste accessible, l&apos;engagement aussi.
+              Les jeunes de moins de 15 ans peuvent nous rejoindre et participer aux
+              formations, au mentorat et au réseau. Toutefois, ils et elles ne sont pas
+              intégré·es aux activités impliquant des transactions financières réelles
+              jusqu&apos;à leurs 15 ans. La formation reste accessible, l&apos;engagement aussi.
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function MissionPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-12 sm:mb-16 text-center">
-            LES TROIS <span className="text-[#00FFFF]">PILIERS</span>
+            Sur quoi on <span className="text-[#00FFFF]">s&apos;appuie</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
             {[
@@ -129,7 +129,7 @@ export default function MissionPage() {
                 num: "02",
                 title: "RÉSEAU",
                 subtitle: "La force collective",
-                desc: "Accès à un réseau de mentors, d'entrepreneurs et de partenaires. Des connexions réelles qui ouvrent des portes. La fraternité comme levier professionnel.",
+                desc: "Accès à un réseau de mentors, d'entrepreneurs et de partenaires. Des connexions réelles qui ouvrent des portes. Le collectif comme levier professionnel.",
               },
               {
                 num: "03",
@@ -160,7 +160,7 @@ export default function MissionPage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-10 sm:mb-12">
-            COMMENT ÇA <span className="text-[#00FFFF]">FONCTIONNE</span>
+            Comment ça se <span className="text-[#00FFFF]">passe</span>
           </h2>
           <div className="space-y-6 sm:space-y-8">
             {[
@@ -172,17 +172,17 @@ export default function MissionPage() {
               {
                 step: "02",
                 title: "Tu adhères au Code",
-                desc: "Un engagement moral et fraternel qui définit nos valeurs, notre discipline et notre façon d'agir ensemble. Le Code est sacré.",
+                desc: "Un engagement qui définit nos valeurs, notre discipline et notre façon d'avancer ensemble. Le Code, c'est notre socle commun.",
               },
               {
                 step: "03",
                 title: "Tu suis le programme",
-                desc: "6 modules fondés sur les neurosciences : reprogrammation mentale, intelligence émotionnelle, stratégie financière, leadership, décision sous pression, construction de projet.",
+                desc: "6 modules fondés sur les sciences cognitives : développement personnel, intelligence émotionnelle, stratégie financière, leadership, prise de décision, construction de projet.",
               },
               {
                 step: "04",
                 title: "Tu es accompagné",
-                desc: "Mentorat par les pairs, suivi personnalisé, responsabilité mutuelle. Tu n'es jamais seul — la fraternité avance ensemble.",
+                desc: "Mentorat par les pairs, suivi personnalisé, responsabilité mutuelle. Tu n'es jamais seul·e — on avance ensemble.",
               },
               {
                 step: "05",
@@ -213,14 +213,11 @@ export default function MissionPage() {
       <section className="border-t border-white/5 bg-[#00FFFF]/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4">
-            LA MISSION TE PARLE <span className="text-[#00FFFF]">?</span>
+            Tu veux en <span className="text-[#00FFFF]">faire partie</span> ?
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            Rejoins une fraternité qui forme, accompagne et construit avec toi.
-            Pas de promesses creuses — des résultats concrets.
-          </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Candidature en 2 minutes · Réponse rapide · 100% gratuit
+          <p className="text-white/50 mb-8 sm:mb-10 max-w-lg mx-auto text-sm sm:text-base">
+            La candidature prend 2 minutes. On répond vite.
+            C&apos;est gratuit, et c&apos;est ouvert à toutes et tous.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link

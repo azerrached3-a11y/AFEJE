@@ -122,7 +122,7 @@ export default function Navbar() {
             href="/rejoindre"
             className="mt-4 px-6 py-4 bg-[#00FFFF] text-black text-center font-bold text-sm tracking-widest uppercase hover:bg-white transition-colors duration-300 btn-primary"
           >
-            Rejoindre la fraternité
+            Nous rejoindre
           </Link>
         </div>
       </div>

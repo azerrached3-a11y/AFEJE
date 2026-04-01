@@ -22,11 +22,11 @@ export default function ContactPage() {
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed mb-3">
-            Question, proposition de partenariat, demande presse ou simplement
-            envie d&apos;en savoir plus ? On répond rapidement.
+            Une question ? Une idée de partenariat ? Ou juste envie d&apos;en
+            savoir plus avant de candidater ? Écris-nous, on répond vite.
           </p>
           <p className="text-white/30 text-sm">
-            Réponse sous 48h · Partenariats bienvenus · Presse & médias
+            On répond généralement sous 48h. Partenariats et presse bienvenus.
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="text-2xl font-bold">Rached Azer</p>
                 <p className="text-white/40 text-sm mt-1">
-                  Fondateur de l&apos;AFEJE, AZZ&CO LABS SAS & OpenCloud Tech
+                  Fondateur de l&apos;AFEJE — c&apos;est lui qui lit tes messages.
                 </p>
               </div>
 
@@ -140,14 +140,11 @@ export default function ContactPage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4">
-            TU VEUX <span className="text-[#00FFFF]">NOUS REJOINDRE</span> ?
+            Envie de <span className="text-[#00FFFF]">nous rejoindre</span> ?
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            La candidature se fait en 2 minutes. Pas de CV, pas de diplôme requis
-            — juste de la motivation et de l&apos;honnêteté.
-          </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Dès 15 ans · 100% gratuit · Réponse rapide
+          <p className="text-white/50 mb-8 sm:mb-10 max-w-lg mx-auto text-sm sm:text-base">
+            Pas besoin de CV ni de diplôme. 2 minutes pour candidater,
+            et c&apos;est gratuit. On attend juste ta motivation.
           </p>
           <Link
             href="/rejoindre"

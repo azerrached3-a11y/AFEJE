@@ -24,19 +24,19 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-5 sm:mb-7 animate-fade-in-up">
-            LE CODE DE LA
+            ON CONSTRUIT
             <br />
-            <span className="text-[#00FFFF]">FRATERNITÉ.</span>
+            <span className="text-[#00FFFF]">ENSEMBLE.</span>
           </h1>
 
           <div className="w-0 h-px bg-[#00FFFF]/40 mx-auto mb-5 sm:mb-7 animate-line-grow" />
 
           <p className="text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-4 sm:mb-6 animate-fade-in-up-delay leading-relaxed italic px-2">
-            &ldquo;On vient du même endroit. On a décidé de montrer autre chose.&rdquo;
+            &ldquo;On vient du même endroit. On a décidé de construire autre chose.&rdquo;
           </p>
 
-          <p className="text-xs sm:text-sm text-white/30 mb-8 sm:mb-10 animate-fade-in-up-delay font-mono">
-            Dès 15 ans · Gratuit · Partout en France
+          <p className="text-xs sm:text-sm text-white/30 mb-8 sm:mb-10 animate-fade-in-up-delay">
+            Une association gratuite, ouverte dès 15 ans, partout en France.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fade-in-up-delay-2 px-2">
@@ -90,10 +90,10 @@ export default function Home() {
       <section className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-4 sm:mb-6 text-center">
-            LES TROIS <span className="text-[#00FFFF]">PILIERS</span>
+            Trois choses qu&apos;on te <span className="text-[#00FFFF]">donne</span>
           </h2>
           <p className="text-white/40 text-sm sm:text-base text-center max-w-xl mx-auto mb-12 sm:mb-16">
-            Chaque pilier est un levier concret vers ton autonomie. Pas de théorie creuse — des outils pour construire.
+            Pas de théorie creuse. Des outils concrets pour construire ta vie.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -107,7 +107,7 @@ export default function Home() {
               {
                 num: "02",
                 title: "RÉSEAU",
-                desc: "Un cercle de frères qui se soutiennent, se challengent et s'élèvent mutuellement. Mentors, partenaires, opportunités — la force du collectif au service de chacun.",
+                desc: "Des gens qui se soutiennent, se challengent et s'élèvent mutuellement. Mentors, partenaires, opportunités — la force du collectif au service de chacun·e.",
                 link: "/mission",
                 cta: "Comprendre la mission →",
               },
@@ -144,101 +144,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Neuroscience teaser */}
+      {/* Mot du fondateur */}
       <section className="border-t border-white/5 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <div className="flex items-center gap-3 mb-8">
+            <Logo size={28} interactive />
+            <p className="text-xs tracking-[0.2em] uppercase text-[#00FFFF]/50">
+              Mot du fondateur
+            </p>
+          </div>
+          <blockquote className="text-white/70 text-base sm:text-lg leading-relaxed space-y-5">
+            <p>
+              J&apos;ai grandi dans un quartier où les opportunités ne tombent pas du ciel.
+              Personne ne m&apos;a tendu la main en me disant &ldquo;tiens, voilà un réseau,
+              voilà un mentor, voilà les outils pour te lancer.&rdquo;
+            </p>
+            <p>
+              J&apos;ai dû tout construire. Et en construisant, j&apos;ai compris un truc simple :
+              le problème, c&apos;est rarement le talent. C&apos;est l&apos;accès. L&apos;accès au savoir,
+              aux bonnes personnes, aux structures qui permettent de passer de l&apos;idée à l&apos;action.
+            </p>
+            <p>
+              L&apos;AFEJE, c&apos;est ça. C&apos;est ce que j&apos;aurais voulu trouver à 15 ans.
+              Un endroit où on apprend à penser autrement, où on s&apos;entraide pour de vrai,
+              et où on construit des choses concrètes — pas juste des rêves.
+            </p>
+          </blockquote>
+          <div className="mt-8 flex items-center gap-4">
+            <div className="w-10 h-px bg-[#00FFFF]/30" />
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-[#00FFFF]/60 mb-4 font-mono">
-                Ce qui nous rend différents
-              </p>
-              <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-6">
-                FONDÉ SUR LES <span className="text-[#00FFFF]">NEUROSCIENCES</span>
-              </h2>
-              <p className="text-white/60 leading-relaxed mb-4 text-sm sm:text-base">
-                Les vrais blocages ne sont pas dans le business plan — ils sont dans la tête.
-                Notre programme s&apos;appuie sur les neurosciences cognitives pour reprogrammer
-                les schémas de pensée limitants et activer les circuits de la performance.
-              </p>
-              <p className="text-white/40 leading-relaxed text-sm mb-6">
-                Neuroplasticité, gestion du stress, intelligence émotionnelle, prise de décision
-                sous pression — chaque module transforme la façon dont tu penses, agis et construis.
-              </p>
-              <Link
-                href="/programme"
-                className="inline-flex items-center gap-2 text-[#00FFFF] text-sm font-bold tracking-wider uppercase hover:gap-3 transition-all duration-300"
-              >
-                Découvrir les 6 modules
-                <span>→</span>
-              </Link>
-            </div>
-            <div className="flex justify-center">
-              <Logo size={200} animate className="opacity-30" />
+              <p className="text-sm font-bold text-white/80">Rached Azer</p>
+              <p className="text-xs text-white/30">Fondateur de l&apos;AFEJE</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who is it for */}
+      {/* Who is it for — narrative, not a checklist */}
       <section className="border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-          <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4 text-center">
-            C&apos;EST POUR <span className="text-[#00FFFF]">TOI</span> SI...
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-8">
+            Tu te reconnais <span className="text-[#00FFFF]">là-dedans ?</span>
           </h2>
-          <p className="text-white/40 text-sm text-center max-w-md mx-auto mb-10 sm:mb-14">
-            Tu n&apos;as pas besoin d&apos;un diplôme. Tu as besoin d&apos;une décision.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-3xl mx-auto">
-            {[
-              "Tu as 15 ans ou plus et tu veux entreprendre",
-              "Tu as une idée mais pas de réseau pour la concrétiser",
-              "Tu viens d'un quartier et tu veux prouver que c'est possible",
-              "Tu veux reprogrammer ta façon de penser et d'agir",
-              "Tu cherches un cadre fraternel, exigeant et bienveillant",
-              "Tu es prêt à t'engager sur 12 mois de transformation",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-3 border border-white/10 px-4 sm:px-5 py-3 sm:py-4 hover:border-[#00FFFF]/20 transition-colors card-hover"
-              >
-                <span className="w-1.5 h-1.5 bg-[#00FFFF] shrink-0 mt-1.5 rounded-full" />
-                <p className="text-white/70 text-sm leading-relaxed">{item}</p>
-              </div>
-            ))}
+          <div className="space-y-6 text-white/60 text-sm sm:text-base leading-relaxed">
+            <p>
+              Tu as une idée qui te trotte dans la tête depuis des mois, mais personne
+              autour de toi pour t&apos;aider à la concrétiser. Tu as l&apos;énergie, mais pas le réseau.
+              Tu sais que tu vaux mieux que ce qu&apos;on attend de toi.
+            </p>
+            <p>
+              Peut-être que tu as 16 ans et que tu veux lancer un truc. Peut-être que tu en as 30
+              et que tu veux enfin te lancer pour de vrai. Peut-être que tu ne sais même pas encore
+              quoi faire — juste que tu veux avancer.
+            </p>
+            <p className="text-white/80">
+              Si ça te parle, l&apos;AFEJE est faite pour toi. On ne demande pas de diplôme,
+              pas de CV, pas d&apos;expérience. On demande juste une chose : que tu sois
+              prêt·e à t&apos;engager vraiment.
+            </p>
           </div>
+          <Link
+            href="/rejoindre"
+            className="inline-flex items-center gap-2 text-[#00FFFF] text-sm font-bold tracking-wider uppercase mt-8 hover:gap-3 transition-all duration-300"
+          >
+            Ça me parle, je candidate
+            <span>→</span>
+          </Link>
         </div>
       </section>
 
-      {/* Final CTA — conversion optimized */}
+      {/* Final CTA — warm, simple */}
       <section className="border-t border-white/5 bg-[#00FFFF]/5 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-[#00FFFF]/[0.03] blur-3xl" />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center relative z-10">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-black tracking-tight mb-4">
-            PRÊT À ÉCRIRE <span className="text-[#00FFFF]">TON HISTOIRE</span> ?
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center relative z-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-6">
+            On ne va pas te promettre que ce sera facile.
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            L&apos;AFEJE n&apos;est pas un programme. C&apos;est un engagement. Une fraternité.
-            Un choix de vie qui commence maintenant.
+          <p className="text-white/60 mb-8 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+            12 mois d&apos;engagement. Du travail sur toi. Des gens qui te challengent.
+            Mais à la fin, tu ne seras plus la même personne.
+            Et c&apos;est <span className="text-[#00FFFF]">gratuit</span>.
           </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Places limitées · Candidature en 2 minutes · 100% gratuit
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <Link
-              href="/rejoindre"
-              className="w-full sm:w-auto px-8 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
-            >
-              Candidater maintenant →
-            </Link>
-            <Link
-              href="/code"
-              className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white/60 font-medium text-sm tracking-widest uppercase hover:border-[#00FFFF]/50 hover:text-[#00FFFF] transition-all duration-300 text-center"
-            >
-              Lire le Code
-            </Link>
-          </div>
+          <Link
+            href="/rejoindre"
+            className="inline-block px-8 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
+          >
+            Je tente l&apos;aventure →
+          </Link>
         </div>
       </section>
     </div>

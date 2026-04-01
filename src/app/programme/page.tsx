@@ -17,18 +17,18 @@ export default function ProgrammePage() {
             Programme pédagogique
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6 sm:mb-8">
-            REPROGRAMMER
+            APPRENDRE À
             <br />
-            <span className="text-[#00FFFF]">LE CERVEAU.</span>
+            <span className="text-[#00FFFF]">PENSER AUTREMENT.</span>
           </h1>
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed mb-4">
-            Un cursus unique en France, fondé sur les neurosciences cognitives et
-            l&apos;intelligence émotionnelle. 6 modules pour transformer ta façon de
-            penser, d&apos;agir et de construire — accessible dès 15 ans.
+            Un cursus unique en France, fondé sur les sciences cognitives et
+            l&apos;intelligence émotionnelle. 6 modules concrets pour changer ta façon
+            de penser, d&apos;agir et de construire — ouvert à toutes et tous dès 15 ans.
           </p>
           <p className="text-white/30 text-sm">
-            12 mois · 6 modules · 100% gratuit · Dès 15 ans
+            Un programme de 12 mois, 6 modules, 100% gratuit. Ouvert dès 15 ans.
           </p>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function ProgrammePage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-12">
-            POURQUOI LES <span className="text-[#00FFFF]">NEUROSCIENCES</span> ?
+            Pourquoi on commence par la <span className="text-[#00FFFF]">tête</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             <div className="space-y-6">
@@ -47,16 +47,15 @@ export default function ProgrammePage() {
                 blocages ne sont pas dans le business plan — ils sont dans la tête.
               </p>
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                Les neurosciences cognitives nous enseignent que le cerveau est
-                plastique : il peut être reprogrammé. Les schémas de pensée
-                limitants acquis dans un environnement difficile peuvent être
-                remplacés par des circuits de performance, de résilience
-                et de vision stratégique.
+                Ton cerveau a appris des réflexes dans un environnement qui ne
+                t&apos;a pas toujours aidé. La bonne nouvelle : il peut réapprendre.
+                C&apos;est prouvé scientifiquement — ça s&apos;appelle la neuroplasticité.
+                Et ça change tout.
               </p>
               <p className="text-white/40 leading-relaxed text-sm">
-                Notre approche s&apos;appuie sur la neuroplasticité, la régulation
-                émotionnelle, les biais cognitifs et les mécanismes de prise de
-                décision pour donner à chaque frère les armes mentales nécessaires.
+                On travaille sur la confiance en soi, la régulation
+                émotionnelle, les biais cognitifs et la prise de décision
+                pour donner à chaque membre les outils mentaux nécessaires.
               </p>
               <Link
                 href="/rejoindre"
@@ -70,7 +69,7 @@ export default function ProgrammePage() {
               {[
                 {
                   title: "Neuroplasticité",
-                  desc: "Reprogrammer les circuits neuronaux pour remplacer les schémas limitants par des réflexes de performance.",
+                  desc: "Le cerveau change quand on le sollicite. On t'aide à remplacer les schémas limitants par de nouveaux réflexes.",
                 },
                 {
                   title: "Intelligence émotionnelle",
@@ -82,7 +81,7 @@ export default function ProgrammePage() {
                 },
                 {
                   title: "Gestion du stress",
-                  desc: "Transformer la pression en carburant grâce aux techniques de régulation neuronale.",
+                  desc: "Apprendre à transformer la pression en énergie, avec des techniques concrètes et éprouvées.",
                 },
               ].map((item) => (
                 <div
@@ -106,10 +105,10 @@ export default function ProgrammePage() {
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4 sm:mb-6 text-center">
-            LES 6 <span className="text-[#00FFFF]">MODULES</span>
+            Ce qu&apos;on <span className="text-[#00FFFF]">travaille</span> ensemble
           </h2>
           <p className="text-white/40 text-sm text-center max-w-lg mx-auto mb-12 sm:mb-16">
-            Chaque module est conçu pour produire un changement mesurable. Pas de théorie abstraite — de la transformation concrète.
+            6 modules. Chacun conçu pour provoquer un déclic concret, pas juste une prise de conscience.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -179,30 +178,30 @@ export default function ProgrammePage() {
         </div>
       </section>
 
-      {/* Méthode Brotherhood */}
+      {/* Méthode collective */}
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-12">
-            LA MÉTHODE <span className="text-[#00FFFF]">FRATERNELLE</span>
+            On apprend <span className="text-[#00FFFF]">ensemble</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             <div className="space-y-6">
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                Chaque module est vécu en groupe. La fraternité n&apos;est pas un
+                Chaque module est vécu en groupe. Le collectif n&apos;est pas un
                 concept — c&apos;est la méthode. On apprend ensemble, on échoue
                 ensemble, on construit ensemble.
               </p>
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                 Le mentorat par les pairs est au cœur du dispositif : chaque
-                frère plus avancé accompagne un frère qui débute. La
+                membre plus avancé·e accompagne quelqu&apos;un qui débute. La
                 responsabilité mutuelle crée un engagement qu&apos;aucun programme
                 classique ne peut reproduire.
               </p>
             </div>
             <div className="space-y-4">
               {[
-                "Apprentissage collectif en petits groupes fraternels",
-                "Mentorat par les pairs — chaque frère est mentor et apprenti",
+                "Apprentissage collectif en petits groupes",
+                "Mentorat par les pairs — chacun·e est mentor et apprenti·e",
                 "Mises en situation réelles avec débriefing neuroscientifique",
                 "Responsabilité mutuelle et engagement devant le groupe",
                 "Suivi personnalisé par un référent expérimenté",
@@ -220,50 +219,33 @@ export default function ProgrammePage() {
         </div>
       </section>
 
-      {/* Durée et rythme */}
+      {/* Une semaine type */}
       <section className="border-t border-white/10 px-4 sm:px-6 py-16 sm:py-20">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-12 text-center">
-            PARCOURS ET <span className="text-[#00FFFF]">RYTHME</span>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-8 sm:mb-10">
+            À quoi ressemble une <span className="text-[#00FFFF]">semaine type</span> ?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              {
-                title: "DURÉE",
-                value: "12 mois",
-                desc: "Un parcours complet sur une année, phases d'apprentissage et de mise en pratique alternées.",
-              },
-              {
-                title: "RYTHME",
-                value: "Intensif",
-                desc: "Sessions hebdomadaires en groupe, travail personnel entre les sessions, accompagnement continu.",
-              },
-              {
-                title: "FORMAT",
-                value: "Hybride",
-                desc: "Présentiel pour le collectif, outils numériques via OpenCloud Tech pour le suivi.",
-              },
-              {
-                title: "COÛT",
-                value: "0€",
-                desc: "Entièrement gratuit. Pas de frais d'inscription, pas de frais cachés. Jamais.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="border border-white/10 p-6 sm:p-8 text-center hover:border-[#00FFFF]/20 transition-colors duration-500 card-hover"
-              >
-                <p className="text-xs tracking-widest uppercase text-white/30 mb-2">
-                  {item.title}
-                </p>
-                <p className="text-2xl sm:text-3xl font-black text-[#00FFFF] mb-4">
-                  {item.value}
-                </p>
-                <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="space-y-6 text-white/60 text-sm sm:text-base leading-relaxed">
+            <p>
+              Le lundi soir, tu retrouves ton groupe. 8 à 10 personnes, toujours les
+              mêmes. Vous travaillez sur le module en cours — pas un cours magistral,
+              plutôt un atelier où chacun·e partage, teste, se plante et recommence.
+            </p>
+            <p>
+              Pendant la semaine, tu as des exercices concrets à appliquer dans ta
+              vraie vie : une conversation difficile à avoir, une décision à prendre
+              différemment, un réflexe à observer chez toi. C&apos;est pas de la théorie
+              — c&apos;est de la pratique.
+            </p>
+            <p>
+              Tu as aussi un·e mentor — quelqu&apos;un qui est passé par là avant toi.
+              Pas un coach en costume. Quelqu&apos;un qui comprend d&apos;où tu viens
+              et qui te challenge vraiment.
+            </p>
+            <p className="text-white/80">
+              Le tout, pendant 12 mois. Hybride (présentiel + outils numériques).
+              Et complètement <span className="text-[#00FFFF] font-bold">gratuit</span>.
+            </p>
           </div>
         </div>
       </section>
@@ -275,14 +257,11 @@ export default function ProgrammePage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight mb-4">
-            PRÊT À <span className="text-[#00FFFF]">TE TRANSFORMER</span> ?
+            Ça te <span className="text-[#00FFFF]">tente</span> ?
           </h2>
-          <p className="text-white/50 mb-3 max-w-lg mx-auto text-sm sm:text-base">
-            Le programme AFEJE n&apos;est pas pour tout le monde. Il est pour ceux
-            qui sont prêts à se remettre en question et à construire quelque chose de grand.
-          </p>
-          <p className="text-white/30 text-xs mb-8 sm:mb-10">
-            Places limitées · Candidature en 2 minutes · Dès 15 ans · 100% gratuit
+          <p className="text-white/50 mb-8 sm:mb-10 max-w-lg mx-auto text-sm sm:text-base">
+            La candidature prend 2 minutes. On ne demande pas de diplôme.
+            Juste de la motivation et l&apos;envie de changer quelque chose.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
