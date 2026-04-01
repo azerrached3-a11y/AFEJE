@@ -1,6 +1,6 @@
-<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="880" viewBox="0 0 800 880" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Dark background for social media -->
-  <rect width="800" height="800" fill="#000000"/>
+  <rect width="800" height="880" fill="#000000"/>
   <circle cx="400" cy="400" r="380" fill="#050505"/>
 
   <defs>
@@ -24,90 +24,84 @@
     </filter>
   </defs>
 
-  <!-- Ambient glow behind core -->
-  <circle cx="400" cy="400" r="112" fill="url(#coreGlow)"/>
+  <!-- Rotated logo group — 52° around center -->
+  <g transform="rotate(52 400 400)">
+    <!-- Ambient glow behind core -->
+    <circle cx="400" cy="400" r="112" fill="url(#coreGlow)"/>
 
-  <!-- Pulsing outer rings -->
-  <circle cx="400" cy="400" r="88" stroke="#00FFFF" stroke-width="3" opacity="0.15"/>
-  <circle cx="400" cy="400" r="64" stroke="#00FFFF" stroke-width="4" opacity="0.25"/>
+    <!-- Pulsing outer rings -->
+    <circle cx="400" cy="400" r="88" stroke="#00FFFF" stroke-width="3" opacity="0.15"/>
+    <circle cx="400" cy="400" r="64" stroke="#00FFFF" stroke-width="4" opacity="0.25"/>
 
-  <!-- Central core -->
-  <circle cx="400" cy="400" r="28" fill="#00FFFF" filter="url(#glow)"/>
+    <!-- Central core -->
+    <circle cx="400" cy="400" r="28" fill="#00FFFF" filter="url(#glow)"/>
 
-  <!-- Branch 1 — top -->
-  <line x1="400" y1="368" x2="400" y2="180" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="400" y1="180" x2="344" y2="88" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="400" y1="180" x2="456" y2="88" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 1 — top -->
+    <line x1="400" y1="368" x2="400" y2="180" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="400" y1="180" x2="344" y2="88" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="400" y1="180" x2="456" y2="88" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Branch 2 — top right -->
-  <line x1="428" y1="380" x2="600" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="600" y1="240" x2="696" y2="216" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="600" y1="240" x2="648" y2="152" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 2 — top right -->
+    <line x1="428" y1="380" x2="600" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="600" y1="240" x2="696" y2="216" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="600" y1="240" x2="648" y2="152" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Branch 3 — bottom right -->
-  <line x1="428" y1="420" x2="600" y2="560" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="600" y1="560" x2="696" y2="584" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="600" y1="560" x2="648" y2="648" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 3 — bottom right -->
+    <line x1="428" y1="420" x2="600" y2="560" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="600" y1="560" x2="696" y2="584" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="600" y1="560" x2="648" y2="648" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Branch 4 — bottom -->
-  <line x1="400" y1="432" x2="400" y2="620" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="400" y1="620" x2="344" y2="712" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="400" y1="620" x2="456" y2="712" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 4 — bottom -->
+    <line x1="400" y1="432" x2="400" y2="620" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="400" y1="620" x2="344" y2="712" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="400" y1="620" x2="456" y2="712" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Branch 5 — bottom left -->
-  <line x1="372" y1="420" x2="200" y2="560" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="200" y1="560" x2="104" y2="584" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="200" y1="560" x2="152" y2="648" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 5 — bottom left -->
+    <line x1="372" y1="420" x2="200" y2="560" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="200" y1="560" x2="104" y2="584" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="200" y1="560" x2="152" y2="648" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Branch 6 — top left -->
-  <line x1="372" y1="380" x2="200" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
-  <line x1="200" y1="240" x2="104" y2="216" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  <line x1="200" y1="240" x2="152" y2="152" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <!-- Branch 6 — top left -->
+    <line x1="372" y1="380" x2="200" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <line x1="200" y1="240" x2="104" y2="216" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <line x1="200" y1="240" x2="152" y2="152" stroke="white" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- Tip glow dots -->
-  <circle cx="344" cy="88" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="344" cy="88" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="456" cy="88" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="456" cy="88" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <!-- Tip glow dots -->
+    <circle cx="344" cy="88" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="344" cy="88" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="456" cy="88" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="456" cy="88" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <circle cx="696" cy="216" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="696" cy="216" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="648" cy="152" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="648" cy="152" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="696" cy="216" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="696" cy="216" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="648" cy="152" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="648" cy="152" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <circle cx="696" cy="584" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="696" cy="584" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="648" cy="648" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="648" cy="648" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="696" cy="584" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="696" cy="584" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="648" cy="648" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="648" cy="648" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <circle cx="344" cy="712" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="344" cy="712" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="456" cy="712" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="456" cy="712" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="344" cy="712" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="344" cy="712" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="456" cy="712" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="456" cy="712" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <circle cx="104" cy="584" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="104" cy="584" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="152" cy="648" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="152" cy="648" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="104" cy="584" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="104" cy="584" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="152" cy="648" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="152" cy="648" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <circle cx="104" cy="216" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="104" cy="216" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
-  <circle cx="152" cy="152" r="16" fill="#00FFFF" opacity="0.1"/>
-  <circle cx="152" cy="152" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="104" cy="216" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="104" cy="216" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
+    <circle cx="152" cy="152" r="16" fill="#00FFFF" opacity="0.1"/>
+    <circle cx="152" cy="152" r="10" fill="#00FFFF" opacity="0.7" filter="url(#glowSm)"/>
 
-  <!-- Circular text ring -->
-  <!-- Subtle ring -->
-  <circle cx="400" cy="400" r="360" stroke="#00FFFF" stroke-width="1" opacity="0.1"/>
+    <!-- Subtle outer ring -->
+    <circle cx="400" cy="400" r="388" stroke="#00FFFF" stroke-width="1.2" opacity="0.08"/>
+  </g>
 
-  <!-- Full name arc: 7 o'clock (210°) clockwise to 4 o'clock (120°) ≈ 270° sweep -->
-  <path id="nameArc" d="M 87.18 580 A 360 360 0 1 1 580 87.18" fill="none" stroke="none"/>
-  <text fill="white" opacity="0.5" font-size="38" font-weight="600" letter-spacing="12" font-family="system-ui, -apple-system, sans-serif">
-    <textPath href="#nameArc" startOffset="3%">ASSOCIATION FRANÇAISE D'ENCADREMENT DES JEUNES ENTREPRENEURS</textPath>
-  </text>
-
-  <!-- Sigle arc: 5 o'clock (150°) clockwise to 7 o'clock (210°) ≈ 60° sweep -->
-  <path id="sigleArc" d="M 711.77 580 A 360 360 0 0 1 87.18 580" fill="none" stroke="none"/>
-  <text fill="#00FFFF" opacity="0.7" font-size="58" font-weight="800" letter-spacing="28" font-family="system-ui, -apple-system, sans-serif">
-    <textPath href="#sigleArc" startOffset="22%">AFEJE</textPath>
-  </text>
+  <!-- Text beneath logo, NOT rotated -->
+  <text x="400" y="838" text-anchor="middle" fill="#00FFFF" opacity="0.8" font-size="56" font-weight="800" letter-spacing="24" font-family="system-ui, -apple-system, sans-serif">AFEJE</text>
+  <text x="400" y="868" text-anchor="middle" fill="white" opacity="0.35" font-size="15" font-weight="600" letter-spacing="1.5" font-family="system-ui, -apple-system, sans-serif">ASSOCIATION FRANÇAISE D'ENCADREMENT DES JEUNES ENTREPRENEURS</text>
 </svg>
