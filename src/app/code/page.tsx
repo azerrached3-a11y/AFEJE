@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Le Code — AFEJE",
-  description: "Le Code : manifeste, principes et serment de la communauté AFEJE.",
+  title: "Le Code — Valeurs et principes de l'AFEJE à Chaville (92)",
+  description:
+    "Le Code AFEJE : manifeste, principes et serment de notre communauté de jeunes entrepreneurs à Chaville, Viroflay et en Île-de-France.",
+  alternates: { canonical: "/code" },
 };
 
 export default function CodePage() {

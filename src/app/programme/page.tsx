@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Programme — AFEJE",
+  title: "Programme — Formation gratuite jeunes entrepreneurs Chaville (92)",
   description:
-    "Le programme pédagogique AFEJE : 6 modules fondés sur les neurosciences cognitives. Gratuit, dès 15 ans.",
+    "Programme pédagogique gratuit de l'AFEJE à Chaville (92370) : 6 modules neurosciences, 12 mois de formation. Ouvert dès 15 ans en Île-de-France, Viroflay, Paris.",
+  alternates: { canonical: "/programme" },
 };
 
 export default function ProgrammePage() {

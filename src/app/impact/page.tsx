@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Impact — AFEJE",
+  title: "Impact — Résultats de l'AFEJE à Chaville et en Hauts-de-Seine",
   description:
-    "L'impact de l'AFEJE : carrières, entreprises, autonomie économique. Dès 15 ans, gratuit, partout en France.",
+    "L'impact de l'AFEJE basée à Chaville (92370) : carrières, entreprises, autonomie économique pour les jeunes d'Île-de-France. Viroflay, Paris, Hauts-de-Seine.",
+  alternates: { canonical: "/impact" },
 };
 
 export default function ImpactPage() {

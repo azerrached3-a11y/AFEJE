@@ -39,7 +39,7 @@ export default function HomeContent() {
           </p>
 
           <p className="text-xs sm:text-sm text-white/30 mb-8 sm:mb-10 animate-fade-in-up-delay">
-            Une association gratuite, ouverte dès 15 ans, partout en France.
+            Association gratuite basée à Chaville (92) — ouverte dès 15 ans en Île-de-France.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fade-in-up-delay-2 px-2">

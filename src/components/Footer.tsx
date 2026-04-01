@@ -98,7 +98,10 @@ export default function Footer() {
               rached.azer@azzcolabs.business
             </a>
             <p className="text-xs text-white/30 mt-4">
-              Préfecture des Hauts-de-Seine
+              Chaville (92370) — Hauts-de-Seine
+            </p>
+            <p className="text-xs text-white/20 mt-1">
+              Île-de-France · Viroflay · Paris
             </p>
           </div>
         </div>

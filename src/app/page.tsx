@@ -2,22 +2,23 @@ import type { Metadata } from "next";
 import HomeContent from "@/components/HomeContent";
 
 export const metadata: Metadata = {
-  title: "AFEJE — On construit ensemble",
+  title: "AFEJE — Association jeunes entrepreneurs Chaville, Viroflay, Paris (92)",
   description:
-    "L'AFEJE accompagne les jeunes entrepreneurs dès 15 ans avec un programme gratuit de 12 mois : neurosciences, réseau, infrastructure. Rejoins-nous.",
+    "L'AFEJE, basée à Chaville (92370), accompagne gratuitement les jeunes entrepreneurs dès 15 ans en Île-de-France. Programme de 12 mois : neurosciences, réseau, mentorat. Viroflay, Paris, Hauts-de-Seine.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "AFEJE — On construit ensemble",
+    title: "AFEJE — Jeunes entrepreneurs à Chaville & Viroflay (92)",
     description:
-      "Association gratuite pour jeunes entrepreneurs. 12 mois de formation, mentorat et réseau. Dès 15 ans, partout en France.",
+      "Programme gratuit de 12 mois pour jeunes entrepreneurs dès 15 ans. Basé à Chaville (92370), Hauts-de-Seine. Neurosciences, réseau, infrastructure.",
     type: "website",
     locale: "fr_FR",
     siteName: "AFEJE",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AFEJE — On construit ensemble",
+    title: "AFEJE — Jeunes entrepreneurs Chaville (92)",
     description:
-      "Association gratuite pour jeunes entrepreneurs. 12 mois de formation, mentorat et réseau.",
+      "Association gratuite pour jeunes entrepreneurs en Île-de-France. 12 mois de formation et mentorat à Chaville.",
   },
 };
 

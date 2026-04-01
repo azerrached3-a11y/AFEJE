@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Mission — AFEJE",
-  description: "La mission de l'AFEJE : accompagner les jeunes entrepreneurs dès 15 ans issus de quartiers difficiles vers l'autonomie économique.",
+  title: "Mission — Accompagner les jeunes entrepreneurs à Chaville et en Île-de-France",
+  description:
+    "La mission de l'AFEJE à Chaville (92370) : accompagner gratuitement les jeunes entrepreneurs dès 15 ans vers l'autonomie économique. Hauts-de-Seine, Viroflay, Paris, IDF.",
+  alternates: { canonical: "/mission" },
 };
 
 export default function MissionPage() {
@@ -23,11 +25,11 @@ export default function MissionPage() {
           <div className="w-20 h-px bg-[#00FFFF]/40 mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed mb-4">
             L&apos;AFEJE existe pour une raison simple : transformer le potentiel brut
-            en puissance économique. On accompagne les jeunes dès 15 ans issus de
-            quartiers prioritaires partout en France.
+            en puissance économique. Basée à Chaville (92370), dans les Hauts-de-Seine,
+            on accompagne les jeunes dès 15 ans en Île-de-France — de Viroflay à Paris.
           </p>
           <p className="text-white/30 text-sm">
-            On ne demande aucun diplôme. C&apos;est gratuit et ouvert dès 15 ans.
+            Aucun diplôme requis. C&apos;est gratuit et ouvert dès 15 ans, partout en IDF.
           </p>
         </div>
       </section>

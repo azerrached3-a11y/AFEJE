@@ -3,8 +3,10 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
-  title: "Contact — AFEJE",
-  description: "Contactez l'AFEJE — Association Française d'Encadrement des Jeunes Entrepreneurs. Questions, partenariats, presse.",
+  title: "Contact — AFEJE à Chaville (92370), Hauts-de-Seine",
+  description:
+    "Contactez l'AFEJE à Chaville (92370). Questions, partenariats, presse. Association jeunes entrepreneurs en Île-de-France, Viroflay, Paris.",
+  alternates: { canonical: "/contact" },
 };
 
 function SocialIcon({ platform }: { platform: string }) {
@@ -197,7 +199,9 @@ export default function ContactPage() {
                   { label: "Dénomination", value: "Association Française d'Encadrement des Jeunes Entrepreneurs" },
                   { label: "Sigle", value: "AFEJE" },
                   { label: "N° association", value: "W923012377", mono: true },
-                  { label: "Préfecture", value: "Hauts-de-Seine" },
+                  { label: "Siège", value: "Chaville (92370), Hauts-de-Seine" },
+                  { label: "Préfecture", value: "Hauts-de-Seine — Île-de-France" },
+                  { label: "Zone d'action", value: "Chaville · Viroflay · Paris · Hauts-de-Seine · IDF" },
                   { label: "Statut", value: "Association loi 1901" },
                   { label: "Écosystème", value: "AZZ&CO LABS SAS · OpenCloud Tech" },
                 ].map((item) => (
