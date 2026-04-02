@@ -7,11 +7,15 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, age, city, situation, motivation } = body;
+    const {
+      name, email, phone, age, city, linkedin, education, situation, skills,
+      has_project, project_description, project_stage, target_audience,
+      revenue_model, motivation, expectations, availability, heard_from,
+    } = body;
 
-    if (!name || !age || !city || !situation || !motivation) {
+    if (!name || !email || !age || !city || !education || !situation || !motivation || !availability) {
       return NextResponse.json(
-        { error: "Tous les champs sont requis." },
+        { error: "Certains champs obligatoires sont manquants." },
         { status: 400 }
       );
     }
@@ -19,7 +23,26 @@ export async function POST(request: Request) {
     // Save to Supabase
     const { error: dbError } = await supabaseAdmin
       .from("applications")
-      .insert({ name, email: email || null, age: Number(age), city, situation, motivation });
+      .insert({
+        name,
+        email,
+        phone: phone || null,
+        age: Number(age),
+        city,
+        linkedin: linkedin || null,
+        education,
+        situation,
+        skills: skills || null,
+        has_project: has_project || false,
+        project_description: project_description || null,
+        project_stage: project_stage || null,
+        target_audience: target_audience || null,
+        revenue_model: revenue_model || null,
+        motivation,
+        expectations: expectations || null,
+        availability,
+        heard_from: heard_from || null,
+      });
 
     if (dbError) {
       console.error("Supabase insert error:", dbError);
@@ -34,7 +57,35 @@ export async function POST(request: Request) {
       to: "rached.azer@azzcolabs.business",
       from: process.env.SENDGRID_FROM_EMAIL!,
       subject: `Nouvelle candidature AFEJE — ${name}`,
-      text: `Nouvelle candidature reçue:\n\nNom: ${name}\nEmail: ${email || "Non renseigné"}\nÂge: ${age}\nVille: ${city}\nSituation: ${situation}\nMotivation: ${motivation}`,
+      text: [
+        `=== NOUVELLE CANDIDATURE AFEJE ===`,
+        ``,
+        `— IDENTITÉ —`,
+        `Nom: ${name}`,
+        `Email: ${email}`,
+        `Téléphone: ${phone || "—"}`,
+        `Âge: ${age}`,
+        `Ville: ${city}`,
+        `LinkedIn: ${linkedin || "—"}`,
+        ``,
+        `— PARCOURS —`,
+        `Formation: ${education}`,
+        `Situation: ${situation}`,
+        `Compétences: ${skills || "—"}`,
+        ``,
+        `— PROJET —`,
+        `A un projet: ${has_project ? "Oui" : "Non"}`,
+        `Description: ${project_description || "—"}`,
+        `Stade: ${project_stage || "—"}`,
+        `Cible: ${target_audience || "—"}`,
+        `Modèle éco: ${revenue_model || "—"}`,
+        ``,
+        `— MOTIVATION —`,
+        `Motivation: ${motivation}`,
+        `Attentes: ${expectations || "—"}`,
+        `Disponibilité: ${availability}`,
+        `Source: ${heard_from || "—"}`,
+      ].join("\n"),
     };
 
     // Welcome email to applicant (only if they provided email)
