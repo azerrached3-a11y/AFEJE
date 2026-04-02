@@ -78,9 +78,9 @@ export default function ChatWidget() {
           <div className="px-4 py-3 border-b border-white/10 bg-white/[0.03]">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[#00FFFF] animate-pulse" />
-              <span className="text-sm font-bold tracking-wider text-white/80">AFEJE Assistant</span>
+              <span className="text-sm font-bold tracking-wider text-white/80">Nao — AFEJE</span>
             </div>
-            <p className="text-[10px] text-white/30 mt-1">Pose tes questions sur le programme</p>
+            <p className="text-[10px] text-white/30 mt-1">Membre du programme, dispo pour parler</p>
           </div>
 
           {/* Messages */}
@@ -88,7 +88,7 @@ export default function ChatWidget() {
             {messages.length === 0 && (
               <div className="text-center py-8">
                 <p className="text-white/20 text-xs">
-                  Salut ! Pose-moi une question sur l&apos;AFEJE, le programme, ou comment candidater.
+                  Hey ! Moi c&apos;est Nao, je suis passé par le programme AFEJE. Dis-moi ce qui t&apos;amène 👋
                 </p>
               </div>
             )}
