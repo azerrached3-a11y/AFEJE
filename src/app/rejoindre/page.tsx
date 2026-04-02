@@ -16,6 +16,7 @@ export default function RejoindrePage() {
 
     const body = {
       name: data.get("name"),
+      email: data.get("email"),
       age: data.get("age"),
       city: data.get("city"),
       situation: data.get("situation"),
@@ -127,6 +128,25 @@ export default function RejoindrePage() {
                 className="w-full bg-transparent border border-white/20 px-5 py-4 text-white placeholder-white/20 focus:border-[#00FFFF]/50 focus:outline-none transition-colors"
                 placeholder="Ton nom complet"
               />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3"
+              >
+                Ton email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-transparent border border-white/20 px-5 py-4 text-white placeholder-white/20 focus:border-[#00FFFF]/50 focus:outline-none transition-colors"
+                placeholder="Pour qu'on puisse te recontacter"
+              />
+              <p className="text-white/20 text-xs mt-2">
+                Facultatif — mais on t&apos;enverra un mail de bienvenue si tu le renseignes.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
