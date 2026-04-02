@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 
-const TOGETHER_API_KEY = process.env.TOGETHER_API_KEY!;
 const TOGETHER_API_URL = "https://api.together.xyz/v1/chat/completions";
 
 const SYSTEM_PROMPT = `Tu es l'assistant virtuel de l'AFEJE (Association Française d'Encadrement des Jeunes Entrepreneurs).
@@ -12,7 +11,7 @@ const SYSTEM_PROMPT = `Tu es l'assistant virtuel de l'AFEJE (Association França
 - 6 modules : neurosciences cognitives, réseau professionnel, infrastructure, mentorat, financement, lancement.
 - Valeurs : transparence, entraide, rigueur, diversité, éthique.
 - Contact : rached.azer@azzcolabs.business
-- Site web : https://afeje.fr
+- Site web : https://afeje.com
 
 Tu dois :
 - Répondre en français, de manière amicale et directe (tutoiement).
@@ -33,7 +32,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${TOGETHER_API_KEY}`,
+        Authorization: `Bearer ${process.env.TOGETHER_API_KEY}`,
       },
       body: JSON.stringify({
         model: "meta-llama/Llama-3.3-70B-Instruct-Turbo",

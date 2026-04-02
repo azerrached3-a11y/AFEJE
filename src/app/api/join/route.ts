@@ -2,7 +2,14 @@ import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 import sgMail from "@sendgrid/mail";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+let _sgReady = false;
+function getSg() {
+  if (!_sgReady) {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+    _sgReady = true;
+  }
+  return sgMail;
+}
 
 export async function POST(request: Request) {
   try {
@@ -107,8 +114,8 @@ export async function POST(request: Request) {
                 On a bien reçu ta candidature. L'équipe la lit et on te recontacte rapidement.
               </p>
               <p style="line-height: 1.7; color: #444;">
-                En attendant, n'hésite pas à découvrir notre <a href="https://afeje.fr/programme" style="color: #0891b2;">programme de 12 mois</a>
-                ou à lire notre <a href="https://afeje.fr/code" style="color: #0891b2;">Code</a>.
+                En attendant, n'hésite pas à découvrir notre <a href="https://afeje.com/programme" style="color: #0891b2;">programme de 12 mois</a>
+                ou à lire notre <a href="https://afeje.com/code" style="color: #0891b2;">Code</a>.
               </p>
               <div style="margin-top: 24px; padding: 16px; background: #f0fdfa; border-left: 3px solid #00FFFF;">
                 <p style="margin: 0; font-size: 14px; color: #555;">
@@ -124,10 +131,10 @@ export async function POST(request: Request) {
           </div>
         `,
       };
-      await sgMail.send(welcomeMsg).catch((err) => console.error("Welcome email error:", err));
+      await getSg().send(welcomeMsg).catch((err) => console.error("Welcome email error:", err));
     }
 
-    await sgMail.send(adminMsg).catch((err) => console.error("Admin email error:", err));
+    await getSg().send(adminMsg).catch((err) => console.error("Admin email error:", err));
 
     return NextResponse.json({ success: true });
   } catch (err) {

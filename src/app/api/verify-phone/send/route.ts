@@ -2,10 +2,13 @@ import { NextResponse } from "next/server";
 import twilio from "twilio";
 import { supabaseAdmin } from "@/lib/supabase";
 
-const client = twilio(
-  process.env.TWILIO_ACCOUNT_SID!,
-  process.env.TWILIO_AUTH_TOKEN!
-);
+let _twilioClient: ReturnType<typeof twilio> | null = null;
+function getTwilio() {
+  if (!_twilioClient) {
+    _twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID!, process.env.TWILIO_AUTH_TOKEN!);
+  }
+  return _twilioClient;
+}
 
 export async function POST(request: Request) {
   try {
@@ -48,13 +51,18 @@ export async function POST(request: Request) {
     const code = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = new Date(Date.now() + 5 * 60 * 1000).toISOString(); // 5 min
 
-    await supabaseAdmin.from("phone_verifications").insert({
+    const { error: insertErr } = await supabaseAdmin.from("phone_verifications").insert({
       phone: intlPhone,
       code,
       expires_at: expiresAt,
     });
 
-    await client.messages.create({
+    if (insertErr) {
+      console.error("OTP insert error:", insertErr);
+      return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
+    }
+
+    await getTwilio().messages.create({
       body: `AFEJE — Ton code de vérification : ${code}`,
       from: process.env.TWILIO_PHONE_NUMBER!,
       to: intlPhone,

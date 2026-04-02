@@ -9,6 +9,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Numéro et code requis." }, { status: 400 });
     }
 
+    // Brute-force protection: max 5 failed checks per phone in last 5 min
+    const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+    const { count } = await supabaseAdmin
+      .from("phone_verifications")
+      .select("id", { count: "exact", head: true })
+      .eq("phone", phone)
+      .eq("verified", false)
+      .gt("created_at", fiveMinAgo);
+
+    if (count !== null && count > 5) {
+      return NextResponse.json(
+        { error: "Trop de tentatives. Réessaie dans quelques minutes." },
+        { status: 429 }
+      );
+    }
+
     // Find the latest non-expired, non-verified code for this phone
     const { data: record } = await supabaseAdmin
       .from("phone_verifications")
