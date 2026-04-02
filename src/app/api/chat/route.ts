@@ -36,7 +36,7 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${TOGETHER_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+        model: "meta-llama/Llama-3.3-70B-Instruct-Turbo",
         messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
         max_tokens: 300,
         temperature: 0.7,
