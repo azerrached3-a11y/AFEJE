@@ -69,7 +69,7 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${process.env.TOGETHER_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+        model: "deepcogito/cogito-v2-1-671b",
         messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
         max_tokens: 400,
         temperature: 0.85,
