@@ -7,8 +7,70 @@ export default function RejoindrePage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
 
+  // Phone verification state
+  const [phoneValue, setPhoneValue] = useState("");
+  const [phoneVerified, setPhoneVerified] = useState(false);
+  const [verifiedPhone, setVerifiedPhone] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
+  const [phoneLoading, setPhoneLoading] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
+
+  async function handleSendOtp() {
+    if (!phoneValue.trim()) return;
+    setPhoneLoading(true);
+    setPhoneError("");
+    try {
+      const res = await fetch("/api/verify-phone/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: phoneValue }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setOtpSent(true);
+        setVerifiedPhone(data.phone);
+      } else {
+        setPhoneError(data.error || "Erreur d'envoi.");
+      }
+    } catch {
+      setPhoneError("Erreur réseau.");
+    } finally {
+      setPhoneLoading(false);
+    }
+  }
+
+  async function handleVerifyOtp() {
+    if (!otpCode.trim()) return;
+    setPhoneLoading(true);
+    setPhoneError("");
+    try {
+      const res = await fetch("/api/verify-phone/check", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: verifiedPhone, code: otpCode }),
+      });
+      const data = await res.json();
+      if (res.ok && data.verified) {
+        setPhoneVerified(true);
+      } else {
+        setPhoneError(data.error || "Vérification échouée.");
+      }
+    } catch {
+      setPhoneError("Erreur réseau.");
+    } finally {
+      setPhoneLoading(false);
+    }
+  }
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (phoneValue.trim() && !phoneVerified) {
+      alert("Vérifie ton numéro de téléphone avant d'envoyer ta candidature.");
+      return;
+    }
+
     setSending(true);
 
     const form = e.currentTarget;
@@ -17,7 +79,8 @@ export default function RejoindrePage() {
     const body = {
       name: data.get("name"),
       email: data.get("email"),
-      phone: data.get("phone"),
+      phone: verifiedPhone || null,
+      phone_verified: phoneVerified,
       age: data.get("age"),
       city: data.get("city"),
       linkedin: data.get("linkedin"),
@@ -146,9 +209,53 @@ export default function RejoindrePage() {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold tracking-wider uppercase text-white/70 mb-3">
-                      Téléphone
+                      Téléphone {phoneVerified && <span className="text-green-400 text-xs ml-2">✓ Vérifié</span>}
                     </label>
-                    <input type="tel" id="phone" name="phone" className="w-full bg-transparent border border-white/20 px-5 py-4 text-white placeholder-white/20 focus:border-[#00FFFF]/50 focus:outline-none transition-colors" placeholder="06 xx xx xx xx" />
+                    {phoneVerified ? (
+                      <div className="w-full bg-transparent border border-green-500/30 px-5 py-4 text-green-400 text-sm">
+                        {verifiedPhone}
+                      </div>
+                    ) : !otpSent ? (
+                      <div className="flex gap-2">
+                        <input
+                          type="tel"
+                          id="phone"
+                          value={phoneValue}
+                          onChange={(e) => setPhoneValue(e.target.value)}
+                          className="flex-1 bg-transparent border border-white/20 px-5 py-4 text-white placeholder-white/20 focus:border-[#00FFFF]/50 focus:outline-none transition-colors"
+                          placeholder="06 xx xx xx xx"
+                        />
+                        <button
+                          type="button"
+                          onClick={handleSendOtp}
+                          disabled={phoneLoading || !phoneValue.trim()}
+                          className="px-4 py-4 bg-[#00FFFF]/10 border border-[#00FFFF]/30 text-[#00FFFF] text-xs font-bold tracking-wider uppercase hover:bg-[#00FFFF]/20 transition-colors disabled:opacity-30 whitespace-nowrap"
+                        >
+                          {phoneLoading ? "..." : "Vérifier"}
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={otpCode}
+                          onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                          maxLength={6}
+                          className="flex-1 bg-transparent border border-[#00FFFF]/30 px-5 py-4 text-white placeholder-white/20 focus:border-[#00FFFF]/50 focus:outline-none transition-colors text-center tracking-[0.5em] font-mono"
+                          placeholder="— — — — — —"
+                        />
+                        <button
+                          type="button"
+                          onClick={handleVerifyOtp}
+                          disabled={phoneLoading || otpCode.length !== 6}
+                          className="px-4 py-4 bg-[#00FFFF]/10 border border-[#00FFFF]/30 text-[#00FFFF] text-xs font-bold tracking-wider uppercase hover:bg-[#00FFFF]/20 transition-colors disabled:opacity-30 whitespace-nowrap"
+                        >
+                          {phoneLoading ? "..." : "Confirmer"}
+                        </button>
+                      </div>
+                    )}
+                    {phoneError && <p className="text-red-400 text-xs mt-2">{phoneError}</p>}
+                    {otpSent && !phoneVerified && <p className="text-[#00FFFF]/40 text-xs mt-2">Code envoyé par SMS à {verifiedPhone}. Valable 5 minutes.</p>}
                   </div>
                 </div>
 

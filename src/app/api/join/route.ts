@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const {
-      name, email, phone, age, city, linkedin, education, situation, skills,
+      name, email, phone, phone_verified, age, city, linkedin, education, situation, skills,
       has_project, project_description, project_stage, target_audience,
       revenue_model, motivation, expectations, availability, heard_from,
     } = body;
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
         name,
         email,
         phone: phone || null,
+        phone_verified: phone_verified || false,
         age: Number(age),
         city,
         linkedin: linkedin || null,
