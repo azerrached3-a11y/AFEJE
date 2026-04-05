@@ -138,7 +138,10 @@ const jsonLd = {
         contactType: "customer service",
         availableLanguage: "French",
       },
-      sameAs: [],
+      sameAs: [
+        "https://www.instagram.com/_afeje_/",
+        "https://www.tiktok.com/@afeje_iledefrance",
+      ],
       keywords:
         "association jeunes entrepreneurs, Chaville, 92370, Hauts-de-Seine, Viroflay, Paris, Île-de-France, accompagnement entrepreneurial, neurosciences, mentorat gratuit, formation jeunes",
     },

@@ -53,37 +53,16 @@ const socials = [
   {
     name: "Instagram",
     platform: "instagram",
-    handle: "@afeje.off",
-    href: "#",
+    handle: "@_afeje_",
+    href: "https://www.instagram.com/_afeje_/",
     color: "hover:text-pink-400 hover:border-pink-400/30",
   },
   {
     name: "TikTok",
     platform: "tiktok",
-    handle: "@afeje.off",
-    href: "#",
+    handle: "@afeje_iledefrance",
+    href: "https://www.tiktok.com/@afeje_iledefrance",
     color: "hover:text-white hover:border-white/30",
-  },
-  {
-    name: "LinkedIn",
-    platform: "linkedin",
-    handle: "AFEJE",
-    href: "#",
-    color: "hover:text-blue-400 hover:border-blue-400/30",
-  },
-  {
-    name: "X (Twitter)",
-    platform: "x",
-    handle: "@afeje_fr",
-    href: "#",
-    color: "hover:text-white hover:border-white/30",
-  },
-  {
-    name: "YouTube",
-    platform: "youtube",
-    handle: "AFEJE",
-    href: "#",
-    color: "hover:text-red-400 hover:border-red-400/30",
   },
 ];
 
