@@ -53,14 +53,14 @@ const socials = [
   {
     name: "Instagram",
     platform: "instagram",
-    handle: "@afeje.fr",
+    handle: "@afeje.off",
     href: "#",
     color: "hover:text-pink-400 hover:border-pink-400/30",
   },
   {
     name: "TikTok",
     platform: "tiktok",
-    handle: "@afeje.fr",
+    handle: "@afeje.off",
     href: "#",
     color: "hover:text-white hover:border-white/30",
   },
@@ -173,15 +173,15 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <a
-                  href="mailto:rached.azer@azzcolabs.business"
+                  href="mailto:azer.rached@afeje.com"
                   className="text-[#00FFFF] hover:text-white transition-colors text-sm sm:text-base break-all"
                 >
-                  rached.azer@azzcolabs.business
+                  azer.rached@afeje.com
                 </a>
               </div>
 
               <a
-                href="mailto:rached.azer@azzcolabs.business?subject=Contact AFEJE"
+                href="mailto:azer.rached@afeje.com?subject=Contact AFEJE"
                 className="inline-block px-6 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary"
               >
                 Envoyer un email →

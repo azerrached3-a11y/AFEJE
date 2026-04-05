@@ -17,7 +17,7 @@ export default function MentionsLegalesPage() {
         "Préfecture des Hauts-de-Seine",
         "Zone d'action : Chaville, Viroflay, Paris, Hauts-de-Seine, Île-de-France",
         "Président et directeur de la publication : Rached Azer",
-        "Email : rached.azer@azzcolabs.business",
+        "Email : azer.rached@afeje.com",
       ],
     },
     {
@@ -40,7 +40,7 @@ export default function MentionsLegalesPage() {
       items: [
         "Les données collectées via le formulaire de candidature sont uniquement utilisées dans le cadre du processus d'adhésion.",
         "Aucune donnée n'est cédée à des tiers.",
-        "Conformément au RGPD, vous pouvez exercer vos droits d'accès, de rectification et de suppression en écrivant à : rached.azer@azzcolabs.business",
+        "Conformément au RGPD, vous pouvez exercer vos droits d'accès, de rectification et de suppression en écrivant à : azer.rached@afeje.com",
       ],
     },
     {

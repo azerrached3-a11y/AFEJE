@@ -92,10 +92,10 @@ export default function Footer() {
             </h4>
             <p className="text-sm text-white/40">Président : Rached Azer</p>
             <a
-              href="mailto:rached.azer@azzcolabs.business"
+              href="mailto:azer.rached@afeje.com"
               className="text-sm text-[#00FFFF]/70 hover:text-[#00FFFF] transition-colors break-all"
             >
-              rached.azer@azzcolabs.business
+              azer.rached@afeje.com
             </a>
             <p className="text-xs text-white/30 mt-4">
               Chaville (92370) — Hauts-de-Seine

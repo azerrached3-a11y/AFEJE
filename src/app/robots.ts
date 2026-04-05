@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://afeje.fr/sitemap.xml",
+    sitemap: "https://afeje.com/sitemap.xml",
   };
 }

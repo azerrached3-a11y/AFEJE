@@ -62,7 +62,7 @@ export async function POST(request: Request) {
 
     // Notify admin
     const adminMsg = {
-      to: "rached.azer@azzcolabs.business",
+      to: "azer.rached@afeje.com",
       from: process.env.SENDGRID_FROM_EMAIL!,
       subject: `Nouvelle candidature AFEJE — ${name}`,
       text: [

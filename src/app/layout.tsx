@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://afeje.fr";
+const SITE_URL = "https://afeje.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -100,7 +100,7 @@ const jsonLd = {
         "@type": "Person",
         name: "Rached Azer",
         jobTitle: "Président",
-        email: "rached.azer@azzcolabs.business",
+        email: "azer.rached@afeje.com",
       },
       address: {
         "@type": "PostalAddress",
@@ -134,7 +134,7 @@ const jsonLd = {
       ],
       contactPoint: {
         "@type": "ContactPoint",
-        email: "rached.azer@azzcolabs.business",
+        email: "azer.rached@afeje.com",
         contactType: "customer service",
         availableLanguage: "French",
       },
