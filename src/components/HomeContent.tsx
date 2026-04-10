@@ -149,6 +149,39 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Diagnostic teaser */}
+      <section className="border-t border-white/5 bg-white/[0.01]">
+        <FadeIn>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
+          <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#00FFFF]/40 mb-4 font-mono">
+            Nouveau — Labo cognitif
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-6">
+            TON CERVEAU{" "}
+            <span className="text-[#00FFFF]">JOUE CONTRE TOI.</span>
+          </h2>
+          <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
+            10 scénarios. Pas de bonnes réponses. Découvre comment ton cerveau
+            prend vraiment ses décisions — ses forces, ses pièges, ses angles morts.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <Link
+              href="/diagnostic/profil-cognitif"
+              className="w-full sm:w-auto px-8 py-4 bg-[#00FFFF] text-black font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-300 btn-primary text-center"
+            >
+              Faire le test — 3 min →
+            </Link>
+            <Link
+              href="/diagnostic"
+              className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white/50 font-medium text-sm tracking-widest uppercase hover:border-[#00FFFF]/40 hover:text-[#00FFFF] transition-all duration-300 text-center"
+            >
+              Voir tous les diagnostics
+            </Link>
+          </div>
+        </div>
+        </FadeIn>
+      </section>
+
       {/* Mot du fondateur */}
       <section className="border-t border-white/5 bg-white/[0.02]">
         <FadeIn>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useId } from "react";
+
 export default function Logo({
   size = 40,
   className = "",
@@ -20,7 +22,8 @@ export default function Logo({
     .filter(Boolean)
     .join(" ");
 
-  const uid = `logo-${Math.random().toString(36).slice(2, 8)}`;
+  const reactId = useId();
+  const uid = `logo-${reactId.replace(/:/g, "")}`;
 
   return (
     <div className={wrapperClass} style={{ width: size, height: size * 1.22 }}>
