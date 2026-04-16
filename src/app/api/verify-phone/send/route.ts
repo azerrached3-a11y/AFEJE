@@ -1,13 +1,33 @@
 import { NextResponse } from "next/server";
-import twilio from "twilio";
 import { supabaseAdmin } from "@/lib/supabase";
 
-let _twilioClient: ReturnType<typeof twilio> | null = null;
-function getTwilio() {
-  if (!_twilioClient) {
-    _twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID!, process.env.TWILIO_AUTH_TOKEN!);
+async function sendTwilioSms(to: string, body: string) {
+  const sid = process.env.TWILIO_ACCOUNT_SID;
+  const token = process.env.TWILIO_AUTH_TOKEN;
+  const from = process.env.TWILIO_PHONE_NUMBER;
+
+  if (!sid || !token || !from) {
+    throw new Error(`Missing Twilio env vars: SID=${!!sid} TOKEN=${!!token} FROM=${!!from}`);
   }
-  return _twilioClient;
+
+  const res = await fetch(
+    `https://api.twilio.com/2010-04-01/Accounts/${sid}/Messages.json`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: "Basic " + btoa(`${sid}:${token}`),
+      },
+      body: new URLSearchParams({ To: to, From: from, Body: body }).toString(),
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Twilio API ${res.status}: ${err}`);
+  }
+
+  return res.json();
 }
 
 export async function POST(request: Request) {
@@ -62,15 +82,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
     }
 
-    await getTwilio().messages.create({
-      body: `AFEJE — Ton code de vérification : ${code}`,
-      from: process.env.TWILIO_PHONE_NUMBER!,
-      to: intlPhone,
-    });
+    await sendTwilioSms(intlPhone, `AFEJE — Ton code de vérification : ${code}`);
 
     return NextResponse.json({ success: true, phone: intlPhone });
-  } catch (err) {
-    console.error("Twilio send error:", err);
-    return NextResponse.json({ error: "Erreur d'envoi SMS." }, { status: 500 });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Phone verify send error:", message);
+    return NextResponse.json({ error: "Erreur d'envoi SMS.", detail: message }, { status: 500 });
   }
 }
