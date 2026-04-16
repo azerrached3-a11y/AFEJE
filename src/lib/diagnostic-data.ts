@@ -318,20 +318,33 @@ export function getScoreLevel(score: number): { label: string; color: string } {
 
 export function computeScores(answers: number[]): Record<string, number> {
   const totals: Record<string, number> = {};
-  dimensions.forEach((d) => (totals[d.id] = 0));
+  const maxTotals: Record<string, number> = {};
+  dimensions.forEach((d) => {
+    totals[d.id] = 0;
+    maxTotals[d.id] = 0;
+  });
 
-  answers.forEach((optionIndex, questionIndex) => {
-    if (optionIndex < 0) return;
-    const q = questions[questionIndex];
-    const scores = q.options[optionIndex].scores;
-    Object.entries(scores).forEach(([dim, val]) => {
-      totals[dim] += val;
+  questions.forEach((q, questionIndex) => {
+    const optionIndex = answers[questionIndex];
+    // Accumulate max possible per dimension
+    dimensions.forEach((d) => {
+      const best = Math.max(...q.options.map((o) => o.scores[d.id] || 0));
+      maxTotals[d.id] += best;
     });
+    // Accumulate user's score
+    if (optionIndex >= 0) {
+      const scores = q.options[optionIndex].scores;
+      Object.entries(scores).forEach(([dim, val]) => {
+        totals[dim] += val;
+      });
+    }
   });
 
   const result: Record<string, number> = {};
   dimensions.forEach((d) => {
-    result[d.id] = Math.round(totals[d.id] / questions.length);
+    const raw = maxTotals[d.id] > 0 ? totals[d.id] / maxTotals[d.id] : 0;
+    // Apply a gentle curve: sqrt pushes mid-range scores higher
+    result[d.id] = Math.round(Math.sqrt(raw) * 100);
   });
 
   return result;
@@ -343,18 +356,18 @@ export function getOverallScore(scores: Record<string, number>): number {
 }
 
 export function getProfileName(overall: number): string {
-  if (overall >= 75) return "Architecte cognitif";
-  if (overall >= 60) return "Stratège en éveil";
-  if (overall >= 45) return "Bâtisseur brut";
+  if (overall >= 85) return "Architecte cognitif";
+  if (overall >= 70) return "Stratège en éveil";
+  if (overall >= 55) return "Bâtisseur brut";
   return "Potentiel dormant";
 }
 
 export function getProfileDescription(overall: number): string {
-  if (overall >= 75)
+  if (overall >= 85)
     return "Tu vois les systèmes. Tu connais tes biais. Tu contrôles tes impulsions. Tu es rare — et tu le sais. La question n'est pas si tu vas réussir, mais à quelle échelle.";
-  if (overall >= 60)
+  if (overall >= 70)
     return "Les fondations sont là. Tu as de la lucidité, du contrôle, de la vision. Mais il y a des angles morts que tu ne vois pas encore — et c'est exactement là que le programme AFEJE change la donne.";
-  if (overall >= 45)
+  if (overall >= 55)
     return "Tu as le feu. L'énergie est là, l'ambition aussi. Mais ton cerveau te piège encore sur certains réflexes. Le programme AFEJE est conçu pour des profils comme le tien — du potentiel brut qui a besoin de structure.";
   return "Tout est encore possible — mais il faut commencer par le cerveau. Le programme AFEJE existe pour ça : transformer le potentiel en puissance. 12 mois pour recâbler ta façon de penser.";
 }

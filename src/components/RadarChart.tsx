@@ -30,9 +30,10 @@ export default function RadarChart({
     return () => clearTimeout(timer);
   }, [animated]);
 
+  const pad = 50;
   const cx = size / 2;
   const cy = size / 2;
-  const maxR = size * 0.36;
+  const maxR = size * 0.30;
   const n = data.length;
 
   const getPoint = (index: number, value: number) => {
@@ -54,13 +55,13 @@ export default function RadarChart({
   const dataPoints = data.map((d, i) => getPoint(i, d.value * progress));
   const dataPolygon = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
-  const labelOffset = 1.22;
+  const labelOffset = 1.32;
 
   return (
     <svg
-      width={size}
-      height={size}
-      viewBox={`0 0 ${size} ${size}`}
+      width={size + pad * 2}
+      height={size + pad * 2}
+      viewBox={`${-pad} ${-pad} ${size + pad * 2} ${size + pad * 2}`}
       className="select-none"
     >
       <defs>
